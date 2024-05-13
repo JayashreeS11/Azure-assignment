@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 # Azure Blob Storage credentials
 connection_string = "${{secrets.AZ_STORAGE_CONN_STRING}}"
-container_name = "jayashrees11container"
+container_name = "${{secrets.AZ_CONN_NAME}}"
 
 @app.route('/list_files', methods=['GET'])
 def list_files():
