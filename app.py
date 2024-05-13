@@ -4,7 +4,7 @@ from azure.storage.blob import BlobServiceClient, ContainerClient
 app = Flask(__name__)
 
 # Azure Blob Storage credentials
-connection_string = "DefaultEndpointsProtocol=https;AccountName=jayashrees11storage;AccountKey=bJ2ea2c5vvcH34JiPh3xSeOxbdgWZaPXZyV+zPdE1weL88rl8kW5iX/kO7xvlsguBoHXlWEbcbV8+ASthPqVbA==;EndpointSuffix=core.windows.net"
+connection_string = "${{secrets.AZ_STORAGE_CONN_STRING}}"
 container_name = "jayashrees11container"
 
 @app.route('/list_files', methods=['GET'])
