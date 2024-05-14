@@ -4,8 +4,8 @@ from azure.storage.blob import BlobServiceClient, ContainerClient
 app = Flask(__name__)
 
 # Azure Blob Storage credentials
-connection_string = "${{secrets.AZ_STORAGE_CONN_STRING}}"
-container_name = "${{secrets.AZ_CONN_NAME}}"
+connection_string = "DefaultEndpointsProtocol=https;AccountName=jayashrees11storage;AccountKey=bJ2ea2c5vvcH34JiPh3xSeOxbdgWZaPXZyV+zPdE1weL88rl8kW5iX/kO7xvlsguBoHXlWEbcbV8+ASthPqVbA==;EndpointSuffix=core.windows.net"
+container_name = "jayashrees11container"
 
 @app.route('/list_files', methods=['GET'])
 def list_files():
@@ -31,4 +31,4 @@ def list_files():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0")
