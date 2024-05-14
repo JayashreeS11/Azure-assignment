@@ -1,7 +1,7 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from azure.storage.blob import BlobServiceClient, ContainerClient
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="/home/jayashree/Azure-assignment/templates")
 
 # Azure Blob Storage credentials
 connection_string = "DefaultEndpointsProtocol=https;AccountName=jayashrees11storage;AccountKey=bJ2ea2c5vvcH34JiPh3xSeOxbdgWZaPXZyV+zPdE1weL88rl8kW5iX/kO7xvlsguBoHXlWEbcbV8+ASthPqVbA==;EndpointSuffix=core.windows.net"
@@ -25,7 +25,8 @@ def list_files():
         # Extract filenames
         file_list = [blob.name.split('/')[-1] for blob in blob_list]
 
-        return jsonify({"folder_name": folder_name, "files": file_list}), 200
+        # return jsonify({"folder_name": folder_name, "files": file_list}), 200
+        return render_template('file_list.html', folder_name=folder_name, files=file_list)
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
