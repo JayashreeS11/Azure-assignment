@@ -15,4 +15,6 @@ The following are completed:
 
 6. The app displays the files present inside the folder (which is given as a query parameter in the URL)
 
-![alt text](<Screenshot 2024-05-14 143046.png>)
+![alt text](<Screenshot 2024-05-14 161240.png>)
+![alt text](<Screenshot 2024-05-14 172959.png>)
+![alt text](<Screenshot 2024-05-14 170053.png>)
