@@ -15,6 +15,11 @@ The following are completed:
 
 6. The app displays the files present inside the folder (which is given as a query parameter in the URL)
 
-![alt text](<Screenshot 2024-05-14 161240.png>)
-![alt text](<Screenshot 2024-05-14 172959.png>)
-![alt text](<Screenshot 2024-05-14 170053.png>)
+Without VPN:
+![alt text](<Without_vpn.png>)
+
+With VPN:
+![alt text](<With_vpn.png>)
+
+Cost:
+![alt text](<Cost.png>)
